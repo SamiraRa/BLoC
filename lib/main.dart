@@ -1,4 +1,5 @@
 import 'package:bloc_app/counterBloc.dart';
+import 'package:bloc_app/next_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -62,6 +63,16 @@ class _MyHomePageState extends State<MyHomePage> {
                     style: Theme.of(context).textTheme.headline4,
                   );
                 }),
+            IconButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => NextPage()));
+              },
+              icon: Icon(
+                Icons.skip_next,
+                color: Colors.blue,
+              ),
+            )
           ],
         ),
       ),
