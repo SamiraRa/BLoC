@@ -68,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => NextPage()));
               },
-              icon: Icon(
+              icon: const Icon(
                 Icons.skip_next,
                 color: Colors.blue,
               ),
