@@ -105,6 +105,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _addTask(BuildContext context) {
     TextEditingController titleController = TextEditingController();
+    TextEditingController descriptionController = TextEditingController();
     showModalBottomSheet(
         context: context,
         builder: (context) => SingleChildScrollView(
@@ -128,6 +129,18 @@ class _MyHomePageState extends State<MyHomePage> {
                           decoration: const InputDecoration(
                               label: Text('Title'),
                               border: OutlineInputBorder()),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: TextField(
+                          controller: descriptionController,
+                          autofocus: false,
+                          decoration: const InputDecoration(
+                              label: Text('Description'),
+                              border: OutlineInputBorder()),
+                          minLines: 3,
+                          maxLines: 5,
                         ),
                       ),
                       Row(
